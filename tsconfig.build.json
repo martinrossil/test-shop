@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "removeComments": true
+    }
+}
