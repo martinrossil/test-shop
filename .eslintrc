@@ -1,0 +1,26 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": ["standard"],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": "off",
+      "semi": "off",
+      "dot-notation": "off",  // this is turned off because of this.style['gap'] = value, look into this
+      "space-before-function-paren": "off",
+      "no-unused-vars": "off", // this is turned off, since eslint doesn't understand
+                              // const enums in typescript, it's safe, since tsc will catch errors
+      "n/no-deprecated-api": "off" // turns of a deprecation warning when package has name "domain"
+    },
+    "env": {
+        "browser": true       // makes HTMLElement and customElements NOT no-undef
+    },
+    "globals": {
+      "describe": "readonly", // describe and it is defined as globals by mocha
+      "it": "readonly",
+      "EventListener": "readonly"
+    }
+}
